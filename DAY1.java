@@ -16,7 +16,7 @@ import java.util.*;
 }*/
 
 
-class DAY1{
+/*class DAY1{
     public static void main(String arg[])
     {
         Scanner sc = new Scanner(System.in);
@@ -36,4 +36,23 @@ class DAY1{
 
         }
     }
+}*/
+
+
+// Numeric to BINARY CONVERSION
+class DAY1{
+    public static void main(String[] args) {
+        Scanner obj =new Scanner(System.in);
+        int n= obj.nextInt();
+        String  Binary =" ";
+        while(n>0)
+        {
+            int rem =n%2;
+            Binary=rem+Binary;
+            n=n/2;
+        }
+        System.out.println(Binary);
+    }
 }
+
+
