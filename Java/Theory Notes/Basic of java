@@ -1,0 +1,517 @@
+# Introduction to Java
+
+What is Java?
+  Java is a high-level, object-oriented, platform-independent programming language developed by Oracle Corporation.
+
+Features of Java:-
+    Platform Independent (Write Once, Run Anywhere)
+    Object-Oriented
+    Secure
+    Robust
+    Multithreaded
+    Portable
+    Distributed
+    High Performance
+
+Java Architecture:-
+                Java Source Code (.java)
+                        ↓
+                    Compiler
+                        ↓
+                    Bytecode (.class)
+                        ↓
+                        JVM
+                        ↓
+                    Machine Code
+Important Components
+JDK (Java Development Kit)
+Contains:
+JRE
+Compiler (javac)
+Development Tools
+JRE (Java Runtime Environment)
+Contains:
+JVM
+Libraries
+JVM (Java Virtual Machine)
+ Executes Java bytecode.
+2. Structure of Java Program
+public class HelloWorld {
+
+    public static void main(String[] args) {
+
+        System.out.println("Hello World");
+
+    }
+}
+Explanation
+Keyword	Meaning
+public	Accessible everywhere
+class	Blueprint for object
+static	Belongs to class
+void	No return value
+main()	Entry point of program
+String[] args	Command line arguments
+
+Output:
+
+Hello World
+3. Variables
+
+Variable = Memory location to store data.
+
+Syntax
+datatype variableName = value;
+
+Example:
+
+int age = 21;
+4. Data Types
+Primitive Data Types
+Type	Size	Example
+byte	1 byte	10
+short	2 bytes	200
+int	4 bytes	1000
+long	8 bytes	100000
+float	4 bytes	10.5f
+double	8 bytes	20.56
+char	2 bytes	'A'
+boolean	1 bit	true
+
+Example:
+
+int age = 22;
+double salary = 50000.50;
+char grade = 'A';
+boolean status = true;
+5. Type Casting
+Implicit Casting
+
+Small → Large
+
+int a = 10;
+double b = a;
+Explicit Casting
+
+Large → Small
+
+double x = 10.5;
+int y = (int)x;
+
+Output:
+
+10
+6. Operators
+Arithmetic Operators
++
+-
+*
+/
+%
+
+Example:
+
+int a = 10;
+int b = 5;
+
+System.out.println(a+b);
+System.out.println(a-b);
+Relational Operators
+==
+!=
+>
+<
+>=
+<=
+
+Example:
+
+System.out.println(a>b);
+
+Output:
+
+true
+Logical Operators
+&&
+||
+!
+
+Example:
+
+boolean result = true && false;
+Assignment Operators
+=
++=
+-=
+*=
+/=
+
+Example:
+
+a += 5;
+7. Input from User
+
+Using Scanner Class
+
+import java.util.Scanner;
+
+Scanner sc = new Scanner(System.in);
+
+int age = sc.nextInt();
+
+System.out.println(age);
+8. Conditional Statements
+if Statement
+if(age >= 18)
+{
+    System.out.println("Eligible");
+}
+if-else
+if(age >= 18)
+{
+    System.out.println("Eligible");
+}
+else
+{
+    System.out.println("Not Eligible");
+}
+else-if Ladder
+if(marks >= 90)
+{
+    System.out.println("A");
+}
+else if(marks >= 75)
+{
+    System.out.println("B");
+}
+else
+{
+    System.out.println("C");
+}
+switch Statement
+switch(day)
+{
+    case 1:
+        System.out.println("Monday");
+        break;
+
+    case 2:
+        System.out.println("Tuesday");
+        break;
+
+    default:
+        System.out.println("Invalid");
+}
+9. Loops
+for Loop
+for(int i=1;i<=5;i++)
+{
+    System.out.println(i);
+}
+
+Output:
+
+1
+2
+3
+4
+5
+while Loop
+int i=1;
+
+while(i<=5)
+{
+    System.out.println(i);
+    i++;
+}
+do-while Loop
+int i=1;
+
+do
+{
+   System.out.println(i);
+   i++;
+}
+while(i<=5);
+10. Arrays
+
+Array stores multiple values of same type.
+
+Declaration
+int[] arr = new int[5];
+Initialization
+int[] arr = {10,20,30,40,50};
+
+Access:
+
+System.out.println(arr[0]);
+
+Output:
+
+10
+Traversing Array
+for(int i=0;i<arr.length;i++)
+{
+    System.out.println(arr[i]);
+}
+
+Enhanced for loop:
+
+for(int num : arr)
+{
+    System.out.println(num);
+}
+11. Methods
+
+Method = Block of reusable code.
+
+Syntax
+returnType methodName()
+{
+}
+
+Example:
+
+public static void greet()
+{
+    System.out.println("Hello");
+}
+
+Calling:
+
+greet();
+Method with Parameters
+public static int add(int a,int b)
+{
+    return a+b;
+}
+
+Call:
+
+int result = add(10,20);
+12. Object-Oriented Programming (OOP)
+
+Java is based on OOP concepts.
+
+Four Pillars
+Encapsulation
+Inheritance
+Polymorphism
+Abstraction
+13. Class and Object
+Class
+
+Blueprint for creating objects.
+
+class Student
+{
+    int id;
+    String name;
+}
+Object
+Student s1 = new Student();
+
+Access:
+
+s1.id = 101;
+s1.name = "Rahul";
+14. Constructor
+
+Special method executed automatically when object is created.
+
+class Student
+{
+    Student()
+    {
+        System.out.println("Constructor Called");
+    }
+}
+15. Encapsulation
+
+Wrapping data and methods together.
+
+class Employee
+{
+    private int salary;
+
+    public void setSalary(int salary)
+    {
+        this.salary = salary;
+    }
+
+    public int getSalary()
+    {
+        return salary;
+    }
+}
+16. Inheritance
+
+Acquiring properties from parent class.
+
+class Animal
+{
+    void eat()
+    {
+        System.out.println("Eating");
+    }
+}
+
+class Dog extends Animal
+{
+    void bark()
+    {
+        System.out.println("Barking");
+    }
+}
+17. Polymorphism
+Method Overloading
+class Maths
+{
+    int add(int a,int b)
+    {
+        return a+b;
+    }
+
+    int add(int a,int b,int c)
+    {
+        return a+b+c;
+    }
+}
+Method Overriding
+class Animal
+{
+    void sound()
+    {
+        System.out.println("Animal Sound");
+    }
+}
+
+class Dog extends Animal
+{
+    void sound()
+    {
+        System.out.println("Bark");
+    }
+}
+18. Abstraction
+
+Hiding implementation details.
+
+Abstract Class
+abstract class Shape
+{
+    abstract void draw();
+}
+Interface
+interface Vehicle
+{
+    void start();
+}
+
+Implementation:
+
+class Car implements Vehicle
+{
+    public void start()
+    {
+        System.out.println("Car Started");
+    }
+}
+19. Exception Handling
+
+Exception = Runtime error.
+
+Examples:
+
+ArithmeticException
+NullPointerException
+ArrayIndexOutOfBoundsException
+try-catch
+try
+{
+    int a = 10/0;
+}
+catch(Exception e)
+{
+    System.out.println(e);
+}
+finally
+finally
+{
+    System.out.println("Always executes");
+}
+20. Strings
+String name = "Infosys";
+
+Common Methods:
+
+length()
+charAt()
+substring()
+toUpperCase()
+toLowerCase()
+equals()
+
+Example:
+
+String str = "Java";
+
+System.out.println(str.length());
+
+Output:
+
+4
+21. Collections Framework
+
+Used to store dynamic data.
+
+ArrayList
+ArrayList<String> list = new ArrayList<>();
+
+list.add("Java");
+list.add("Python");
+
+System.out.println(list);
+HashSet
+
+No duplicates.
+
+HashSet<Integer> set = new HashSet<>();
+HashMap
+
+Key-Value pair.
+
+HashMap<Integer,String> map =
+new HashMap<>();
+
+map.put(101,"Rahul");
+22. Packages
+
+Package = Collection of classes.
+
+package mypackage;
+
+Import:
+
+import java.util.Scanner;
+23. Access Modifiers
+Modifier	Same Class	Package	Subclass	Everywhere
+private	Yes	No	No	No
+default	Yes	Yes	No	No
+protected	Yes	Yes	Yes	No
+public	Yes	Yes	Yes	Yes
+
+24. File Handling
+
+Write File:
+
+FileWriter fw =
+new FileWriter("data.txt");
+
+fw.write("Hello");
+fw.close();
+
+Read File:
+
+FileReader fr =
+new FileReader("data.txt");
