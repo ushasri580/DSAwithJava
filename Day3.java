@@ -278,7 +278,7 @@ class Day3{
 }*/
 
 //pyramid pattern
-class Day3
+/*class Day3
 {
     public static void main(String arg[])
     {
@@ -297,20 +297,384 @@ class Day3
             System.out.println(" ");
         }
     }
+}*/
+
+
+//hallow pattern
+/*class Day3
+{
+    public static void main(String arg[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        for(int i=1;i<=n;i++)
+        {
+            for(int j=1;j<=n;j++)
+            {
+                if(i==1||i==n||j==1||j==n)
+                {
+                    System.out.print("* ");
+                }
+                else
+                {
+                    System.out.print("");
+                }
+            }
+            System.out.println(" ");
+        }
+    }
+}*/
+
+//hallown right angle triangle
+/*class Day3{
+    public static void main(String arg[])
+    {
+            Scanner sc=new Scanner(System.in);
+            int n=sc.nextInt();
+            for(int i=0;i<=n;i++)
+            {
+                for(int j=0;j<=i;j++)
+                {
+                    if(i==0||i==n||j==0||j==i)
+                    {
+                        System.out.print("* ");
+                    }
+                    else
+                    {
+                        System.out.print("  ");
+                    }
+                }
+                System.out.println();
+            }
+    }
+}*/
+
+
+//hawoon square with numbers
+/*class Day3{
+    public static void main(String arg[])               
+    {
+            Scanner sc=new Scanner(System.in);
+            int n=sc.nextInt();
+            int a=1;
+            for(int i=1;i<=n;i++)
+            {
+                for(int j=1;j<=n;j++)
+                {
+                    if(i==1||i==n||j==1||j==n)
+                    {
+                        System.out.print(a+" ");
+                        a++;
+                    }
+                    else
+                    {
+                        System.out.print("  ");
+                    }
+                }
+                System.out.println();
+            }
+    }                                                                                                                                   
+}*/   
+
+//hallown with alphabets
+/*class Day3{
+    public static void main(String arg[])               
+    {
+            Scanner sc=new Scanner(System.in);
+            int n=sc.nextInt();
+            char a='A';
+            for(int i=1;i<=n;i++)
+            {
+                for(int j=1;j<=n;j++)
+                {
+                    if(i==1||i==n||j==1||j==n)
+                    {
+                        System.out.print(a+" ");
+                        a++;
+                    }
+                    else
+                    {
+                        System.out.print("  ");
+                    }
+                }
+                System.out.println();
+            }
+    }
+}*/
+
+//hallow with inverse right angle triangle
+/*class Day3{
+    public static void main(String arg[])
+    {       
+            Scanner sc=new Scanner(System.in);
+            int n=sc.nextInt();
+            for(int i=0;i<=n;i++)
+            {
+                for(int j=0;j<=n-i;j++)
+                {
+                    if(i==0||i==n||j==0||j==n-i)
+                    {
+                        System.out.print("* ");
+                    }
+                    else
+                    {
+                        System.out.print("  ");
+                    }
+                }
+                System.out.println();  
+            }
+    }
+}
+*/
+
+//rhombus pattern
+/*class Day3{
+    public static void main(String arg[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        for(int i=1;i<=n;i++)
+        {
+            for(int j=1;j<=n-i;j++)
+            {
+                System.out.print(" ");
+            }
+            for(int j=1;j<=n;j++)
+            {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+}
+*/
+
+//hallow rhombus pattern
+/*class Day3{
+    public static void main(String arg[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt(); 
+        for(int i=1;i<=n;i++)
+        {
+            for(int j=1;j<=n-i;j++)
+            {
+                System.out.print(" ");
+            }
+            for(int j=1;j<=n;j++)
+            {
+                if(i==1||i==n||j==1||j==n)
+                {
+                    System.out.print("* ");
+                }
+                else
+                {
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
+        }
+    }
+}*/
+
+//HALLOWS DIAMOND PATTERN
+/*class Day3{
+    public static void main(String arg[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        for(int i=1;i<=n;i++)
+        {
+            for(int j=1;j<=n-i;j++)
+            {
+                System.out.print(" ");
+            }
+            for(int j=1;j<=i;j++)
+            {
+                if(i==1||j==1||j==i)
+                {
+                    System.out.print("* ");
+                }
+                else
+                {
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
+        }
+        for(int i=1;i<=n-1;i++)
+        {
+            for(int j=1;j<=i;j++)
+            {
+                System.out.print(" ");
+            }
+            for(int j=1;j<=n-i;j++)
+            {
+                if(i==n-1||j==1||j==n-i)
+                {
+                    System.out.print("* ");
+                }
+                else
+                {
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
+        }
+    }
+}*/
+
+
+//HALLOW RHOBUS WITH NUMBERS
+/*class Day3{
+    public static void main (String arg[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int a=1;
+        for(int i=1;i<=n;i++)
+        {
+            for(int j=1;j<=n-i;j++)
+            {
+                System.out.print(" ");
+            }
+            for(int j=1;j<=n;j++)
+            {
+                if(i==1||i==n||j==1||j==n)
+                {
+                    System.out.print(a+" ");
+                    a++;
+                }
+                else
+                {
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
+        }
+    }
+}*/
+
+//hallow rhombus with alphabets
+/*class Day3{
+    public static void main (String arg[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        char a='A';
+        for(int i=1;i<=n;i++)
+        {
+            for(int j=1;j<=n-i;j++)
+            {
+                System.out.print(" ");
+            }
+            for(int j=1;j<=n;j++)
+            {
+                if(i==1||i==n||j==1||j==n)
+                {
+                    System.out.print(a+" ");
+                    a++;
+                }
+                else
+                {
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
+        }
+    }
+}*/
+
+//Squarepattern with odd numbers
+/*class Day3{
+    public static void main (String arg[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int a=1;
+        for(int i=1;i<=n;i++)
+        {
+            for(int j=1;j<=n;j++)
+            {
+                System.out.print(a+" ");
+                a+=2;
+            }
+            System.out.println();
+        }
+    }
+}*/
+
+
+//Squarepattern with even numbers
+/*class Day3{
+    public static void main (String arg[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int a=2;
+        for(int i=1;i<=n;i++)
+        {
+            for(int j=1;j<=n;j++)
+            {
+                System.out.print(a+" ");
+                a+=2;
+            }
+            System.out.println();
+        }
+    }
+}*/
+
+//Squarepattern witth factorial numbers
+/*class Day3{
+    public static void main (String arg[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int fact=1;
+        for(int i=1;i<=n;i++)
+        {
+            for(int j=1;j<=n;j++)
+            {   
+                fact=fact*j;
+                System.out.print(fact+" ");
+            }
+            System.out.println();
+        } 
+    }
+}*/
+
+//Squarepattern with square numbers
+class Day3{
+    public static void main (String arg[])
+    {
+        Scanner sc=new Scanner(System.in);      
+        int n=sc.nextInt();
+        for(int i=1;i<=n;i++)
+        {
+            for(int j=1;j<=n;j++)
+            {
+                int square=j*j;
+                System.out.print(square+" ");
+            }
+            System.out.println();
+        }
+    }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//square pattern with cube numbers
+/*class Day3{
+    public static void main (String arg[])      
+    {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        for(int i=1;i<=n;i++)
+        {
+            for(int j=1;j<=n;j++)
+            {
+                int cube=j*j*j;
+                System.out.print(cube+" ");
+            }
+            System.out.println();
+        }
+    }
+}*/        
