@@ -10,7 +10,7 @@ import java.util.*;
             int num=a[i];
             int temp=num;
             int sum=0;
-            while(temp==0)
+            while(temp>0)
             {
               int rem=temp%10;
               sum=sum+rem*rem*rem;
@@ -257,33 +257,48 @@ class Day6 {
         int sol= mergeSort(m, 0, m.length - 1);
             System.out.println(sol );
     }
-}*/
+}
 
-
+//quicksort
 import java.util.Arrays;
 public class Day6{
-    public static void  partition(int arr[],int pivort)
-    {
-        int low=0,upper=arr.length-1;
-        while(low<upper && arr[low]<=pivot)
+   public static int partition(int arr[], int lower, int upper) {
+    int pivot = arr[lower], low = lower, high = upper;
+    while (low <= high) {
+        while (low <= upper && arr[low] <= pivot) {
             low++;
-        while(upper>low &&arr[upper]>pivot)
-            upper --;
-        if(low<upper)
-        {
-            int safe=arr[low];
-            arr[low]=arr[upper];
-            arr[upper]=safe;
         }
-}
-public static void main(string arg[])
+        while (high >= lower && arr[high] > pivot) {
+            high--;
+        }
+        if (low < high) {  // Changed from while to if
+            int temp = arr[low];
+            arr[low] = arr[high];  // Changed from arr[upper] to arr[high]
+            arr[high] = temp;
+        }
+    }
+    int temp = arr[lower];
+    arr[lower] = arr[high];
+    arr[high] = temp;
+    return high;
+    }
+public static void quicsort(int arr[],int lower,int upper)
 {
-    int[] arr={5,6,71,86,96,75,95,38,30,100};
-    int pivot=53;
-    partition(arr,pivot);
-    for(int i=0;i<arr.length;i++)
+    if(lower<upper)
     {
-        System.out.println(arr[i]);
+        int pivot=partition(arr,lower,upper);
+        quicsort(arr,lower,pivot-1);
+        quicsort(arr,pivot+1,upper);
     }
 }
+public static void main(String arg[])
+{
+    int[] arr={30,6,71,86,96,75,95,38,5,100};
+    quicsort(arr,0,arr.length-1);
+    for(int i=0;i<arr.length;i++)
+    {
+        System.out.print(arr[i]+" ");
+    }
 }
+}*/
+
